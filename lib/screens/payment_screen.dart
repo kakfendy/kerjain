@@ -11,7 +11,8 @@ class PaymentScreen extends StatefulWidget {
   final String weekday;
   final List<ActiveBookingsModel> list;
 
-  const PaymentScreen({Key? key, required this.list, required this.weekday}) : super(key: key);
+  const PaymentScreen({Key? key, required this.list, required this.weekday})
+      : super(key: key);
 
   @override
   State<PaymentScreen> createState() => _PaymentScreenState();
@@ -54,16 +55,20 @@ class _PaymentScreenState extends State<PaymentScreen> {
               height: MediaQuery.of(context).size.height * 0.06,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                color: appData.isDark ? bottomContainerDark : bottomContainerBorder,
+                color: appData.isDark
+                    ? bottomContainerDark
+                    : bottomContainerBorder,
                 borderRadius: BorderRadius.circular(40),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Rs.${widget.list[0].price}",
+                    "Rp.${widget.list[0].price}",
                     style: TextStyle(
-                      color: appData.isDark ? bottomContainerTextDark : bottomContainerText,
+                      color: appData.isDark
+                          ? bottomContainerTextDark
+                          : bottomContainerText,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -85,7 +90,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     child: Text(
                       "Pay",
                       style: TextStyle(
-                        color: appData.isDark ? bottomContainerTextDark : bottomContainerText,
+                        color: appData.isDark
+                            ? bottomContainerTextDark
+                            : bottomContainerText,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -101,15 +108,18 @@ class _PaymentScreenState extends State<PaymentScreen> {
         padding: EdgeInsets.all(20),
         child: Column(
           children: [
-            PaymentContainer(title: "Credit & Debit Cards", icon: Icons.credit_card),
+            PaymentContainer(
+                title: "Credit & Debit Cards", icon: Icons.credit_card),
             Space(16),
             PaymentContainer(title: "Net Banking", icon: Icons.food_bank),
             Space(16),
-            PaymentContainer(title: "Cash On Delivery", icon: Icons.delivery_dining),
+            PaymentContainer(
+                title: "Cash On Delivery", icon: Icons.delivery_dining),
             Space(16),
             PaymentContainer(title: "Wallets", icon: Icons.wallet),
             Space(16),
-            PaymentContainer(title: "UPIs", icon: Icons.book_online_rounded, isUpi: true),
+            PaymentContainer(
+                title: "UPIs", icon: Icons.book_online_rounded, isUpi: true),
             Space(55),
           ],
         ),
