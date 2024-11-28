@@ -22,7 +22,7 @@ class _SearchFragmentState extends State<SearchFragment> {
         elevation: 0,
         backgroundColor: transparent,
         title: Text(
-          "Search",
+          "Pencarian",
           textAlign: TextAlign.center,
           style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
         ),
@@ -37,7 +37,7 @@ class _SearchFragmentState extends State<SearchFragment> {
                   keyboardType: TextInputType.name,
                   style: TextStyle(fontSize: 17),
                   decoration: commonInputDecoration(
-                    hintText: "Search for services",
+                    hintText: "Butuh Layanan Apa?",
                     suffixIcon: Icon(Icons.search, size: 18),
                   ),
                 ),
@@ -50,7 +50,8 @@ class _SearchFragmentState extends State<SearchFragment> {
               physics: NeverScrollableScrollPhysics(),
               itemCount: serviceProviders.length,
               itemBuilder: (context, index) {
-                return SearchComponent(index, servicesModel: serviceProviders[index]);
+                return SearchComponent(index,
+                    servicesModel: serviceProviders[index]);
               },
             )
           ],

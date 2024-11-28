@@ -41,7 +41,7 @@ class BookingHistoryComponent extends StatelessWidget {
                       lastBooking[index].status,
                       textAlign: TextAlign.start,
                       style: TextStyle(
-                        color: lastBooking[index].status == "Completed"
+                        color: lastBooking[index].status == "Selesai"
                             ? greenColor
                             : redColor,
                         fontWeight: FontWeight.w500,
@@ -84,7 +84,7 @@ class BookingHistoryComponent extends StatelessWidget {
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 14)),
                             Space(2),
-                            Text("at",
+                            Text("pada",
                                 style: TextStyle(
                                     color: orangeColor, fontSize: 12)),
                             Space(2),
@@ -110,7 +110,7 @@ class BookingHistoryComponent extends StatelessWidget {
                 Divider(color: dividerColor, thickness: 1),
                 Space(4),
                 Text(
-                  "Book Again",
+                  "Pesan Lagi",
                   textAlign: TextAlign.start,
                   style: TextStyle(
                       color: Colors.blue,

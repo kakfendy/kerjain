@@ -152,7 +152,7 @@ class _FavoriteServiceComponentState extends State<FavoriteServiceComponent> {
                                         fontSize: 20),
                                   ),
                                   Text(
-                                    "/hr ",
+                                    "/jam",
                                     textAlign: TextAlign.start,
                                     style: TextStyle(
                                         fontWeight: FontWeight.w900,
@@ -162,7 +162,7 @@ class _FavoriteServiceComponentState extends State<FavoriteServiceComponent> {
                               ),
                               Space(8),
                               ElevatedButton(
-                                child: Text("Book"),
+                                child: Text("Jadwalkan"),
                                 onPressed: () {
                                   Navigator.push(
                                     context,

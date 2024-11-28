@@ -21,16 +21,16 @@ class LastBookingsModel {
 List<LastBookingsModel> getLastBooking() {
   List<LastBookingsModel> list = List.empty(growable: true);
   list.add(
-    LastBookingsModel(0, "Full House Cleaning", "Jono Cleaning Services",
-        "Jan 4,2022", "4am", "Completed", 2599),
+    LastBookingsModel(0, "Pembersihkan Full House", "Jono Cleaning Services",
+        "Agt 4,2024", "4am", "Selesai", 2599),
   );
   list.add(
-    LastBookingsModel(1, "Kitchen Cleaning", "Susanti Cleaning Services",
-        "Dec 4,2022", "6am", "Cancelled", 3000),
+    LastBookingsModel(1, "Pembersihkan Dapur", "Susanti Cleaning Services",
+        "Sept 4,2024", "6am", "Dibatalkan", 3000),
   );
   list.add(
-    LastBookingsModel(2, "Bedroom Cleaning", "Dedi Cleaning Services",
-        "Feb 17,2022", "6am", "Completed", 2499),
+    LastBookingsModel(2, "Pembersihan Kamar", "Dedi Cleaning Services",
+        "Okt 4,2024", "6am", "Selesai", 2499),
   );
   return list;
 }
@@ -45,7 +45,7 @@ void againBooking(int id) {
       lastBooking[id].name,
       lastBooking[id].date,
       lastBooking[id].time,
-      "In Process",
+      "Dalam Proses",
       lastBooking[id].price,
     ),
   );

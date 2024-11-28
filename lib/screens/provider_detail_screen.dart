@@ -14,7 +14,9 @@ class ProviderDetailScreen extends StatefulWidget {
   final int serviceIndex;
   final int index;
 
-  const ProviderDetailScreen({Key? key, required this.serviceIndex, required this.index}) : super(key: key);
+  const ProviderDetailScreen(
+      {Key? key, required this.serviceIndex, required this.index})
+      : super(key: key);
 
   @override
   State<ProviderDetailScreen> createState() => _ProviderDetailScreenState();
@@ -34,7 +36,7 @@ class _ProviderDetailScreenState extends State<ProviderDetailScreen> {
           elevation: 0,
           backgroundColor: transparent,
           title: Text(
-            "Details",
+            "Detail",
             textAlign: TextAlign.center,
             style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
           ),
@@ -50,9 +52,14 @@ class _ProviderDetailScreenState extends State<ProviderDetailScreen> {
                   Expanded(
                     child: OutlinedButton(
                       style: OutlinedButton.styleFrom(
-                          foregroundColor: appData.isDark ? whiteColor : blackColor, fixedSize: Size(MediaQuery.of(context).size.width, MediaQuery.of(context).size.height * 0.06),
+                          foregroundColor:
+                              appData.isDark ? whiteColor : blackColor,
+                          fixedSize: Size(MediaQuery.of(context).size.width,
+                              MediaQuery.of(context).size.height * 0.06),
                           shape: StadiumBorder(),
-                          side: BorderSide(color: appData.isDark ? whiteColor : blackColor, width: 1)),
+                          side: BorderSide(
+                              color: appData.isDark ? whiteColor : blackColor,
+                              width: 1)),
                       child: Icon(Icons.message_rounded, size: 20),
                       onPressed: () {
                         //
@@ -63,15 +70,18 @@ class _ProviderDetailScreenState extends State<ProviderDetailScreen> {
                   Expanded(
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        fixedSize: Size(MediaQuery.of(context).size.width, MediaQuery.of(context).size.height * 0.06),
+                        fixedSize: Size(MediaQuery.of(context).size.width,
+                            MediaQuery.of(context).size.height * 0.06),
                         shape: StadiumBorder(),
                       ),
-                      child: Text("Book"),
+                      child: Text("Jadwalkan"),
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => ProviderServicesScreen(serviceIndex: widget.serviceIndex, index: widget.index),
+                            builder: (context) => ProviderServicesScreen(
+                                serviceIndex: widget.serviceIndex,
+                                index: widget.index),
                           ),
                         );
                       },
@@ -90,7 +100,9 @@ class _ProviderDetailScreenState extends State<ProviderDetailScreen> {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: Text(
-                  serviceProviders[widget.serviceIndex].serviceProviders[widget.index].name,
+                  serviceProviders[widget.serviceIndex]
+                      .serviceProviders[widget.index]
+                      .name,
                   textAlign: TextAlign.start,
                   style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18),
                 ),
@@ -98,7 +110,9 @@ class _ProviderDetailScreenState extends State<ProviderDetailScreen> {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: Text(
-                  serviceProviders[widget.serviceIndex].serviceProviders[widget.index].detailDescription,
+                  serviceProviders[widget.serviceIndex]
+                      .serviceProviders[widget.index]
+                      .detailDescription,
                   overflow: TextOverflow.ellipsis,
                   maxLines: 6,
                   textAlign: TextAlign.start,
@@ -115,14 +129,21 @@ class _ProviderDetailScreenState extends State<ProviderDetailScreen> {
                       child: Container(
                         foregroundDecoration: BoxDecoration(
                           gradient: LinearGradient(
-                            colors: [blackColor, transparent, transparent, transparent],
+                            colors: [
+                              blackColor,
+                              transparent,
+                              transparent,
+                              transparent
+                            ],
                             begin: Alignment.bottomCenter,
                             end: Alignment.topCenter,
                             stops: [0, 0.2, 0.8, 1],
                           ),
                         ),
                         child: Image.asset(
-                          serviceProviders[widget.serviceIndex].serviceProviders[widget.index].providerImage,
+                          serviceProviders[widget.serviceIndex]
+                              .serviceProviders[widget.index]
+                              .providerImage,
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -139,17 +160,26 @@ class _ProviderDetailScreenState extends State<ProviderDetailScreen> {
                           children: [
                             Column(
                               children: [
-                                Text("jobs", style: TextStyle(color: whiteColor, fontSize: 12)),
+                                Text("jobs",
+                                    style: TextStyle(
+                                        color: whiteColor, fontSize: 12)),
                                 Space(4),
                                 Text(
-                                  serviceProviders[widget.serviceIndex].serviceProviders[widget.index].jobs,
-                                  style: TextStyle(color: whiteColor, fontWeight: FontWeight.w900, fontSize: 18),
+                                  serviceProviders[widget.serviceIndex]
+                                      .serviceProviders[widget.index]
+                                      .jobs,
+                                  style: TextStyle(
+                                      color: whiteColor,
+                                      fontWeight: FontWeight.w900,
+                                      fontSize: 18),
                                 ),
                               ],
                             ),
                             Column(
                               children: [
-                                Text("share", style: TextStyle(color: whiteColor, fontSize: 12)),
+                                Text("Bagikan",
+                                    style: TextStyle(
+                                        color: whiteColor, fontSize: 12)),
                                 Space(4),
                                 Icon(
                                   Icons.share,
@@ -160,25 +190,37 @@ class _ProviderDetailScreenState extends State<ProviderDetailScreen> {
                             ),
                             Column(
                               children: [
-                                Text("Rating", style: TextStyle(color: whiteColor, fontSize: 12)),
+                                Text("Nilai",
+                                    style: TextStyle(
+                                        color: whiteColor, fontSize: 12)),
                                 Space(4),
                                 Text(
-                                  serviceProviders[widget.serviceIndex].serviceProviders[widget.index].star,
-                                  style: TextStyle(color: whiteColor, fontWeight: FontWeight.w900, fontSize: 18),
+                                  serviceProviders[widget.serviceIndex]
+                                      .serviceProviders[widget.index]
+                                      .star,
+                                  style: TextStyle(
+                                      color: whiteColor,
+                                      fontWeight: FontWeight.w900,
+                                      fontSize: 18),
                                 ),
                               ],
                             ),
                             Column(
                               children: [
-                                Text("Save", style: TextStyle(color: whiteColor, fontSize: 12)),
+                                Text("Simpan",
+                                    style: TextStyle(
+                                        color: whiteColor, fontSize: 12)),
                                 Space(4),
                                 GestureDetector(
                                   onTap: () {
                                     setLiked(widget.serviceIndex, widget.index);
                                     setState(() {});
                                   },
-                                  child: serviceProviders[widget.serviceIndex].serviceProviders[widget.index].isLiked
-                                      ? Icon(Icons.favorite, color: Colors.red, size: 18)
+                                  child: serviceProviders[widget.serviceIndex]
+                                          .serviceProviders[widget.index]
+                                          .isLiked
+                                      ? Icon(Icons.favorite,
+                                          color: Colors.red, size: 18)
                                       : Icon(
                                           Icons.favorite,
                                           color: Colors.white,
@@ -196,7 +238,7 @@ class _ProviderDetailScreenState extends State<ProviderDetailScreen> {
               ),
               Space(32),
               homeTitleWidget(
-                titleText: "Recent Projects",
+                titleText: "Pekerjaan Sebelumnya",
                 onAllTap: () {
                   Navigator.push(
                     context,
@@ -216,7 +258,8 @@ class _ProviderDetailScreenState extends State<ProviderDetailScreen> {
                   padding: EdgeInsets.symmetric(horizontal: 8),
                   children: List.generate(
                     renovateServices.length,
-                    (index) => ServiceListComponent(commonModel: renovateServices[index], index: index),
+                    (index) => ServiceListComponent(
+                        commonModel: renovateServices[index], index: index),
                   ),
                 ),
               ),

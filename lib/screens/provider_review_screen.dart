@@ -84,23 +84,23 @@ class _ProviderReviewState extends State<ProviderReview> {
                     ],
                   ),
                   Space(16),
-                  Text("Date And Time",
+                  Text("Tanggal dan Waktu",
                       style:
                           TextStyle(fontWeight: FontWeight.w900, fontSize: 20)),
                   Space(4),
                   Text(
-                    "26 jan 2022 at 4am",
+                    "04 Nov 2024 pukul 18",
                     overflow: TextOverflow.ellipsis,
                     maxLines: 6,
                     textAlign: TextAlign.start,
                     style: TextStyle(color: subTitle, fontSize: 14),
                   ),
                   Space(16),
-                  Text("Detail Review",
+                  Text("Detail Ulasan",
                       style:
                           TextStyle(fontWeight: FontWeight.w900, fontSize: 20)),
                   Text(
-                    " When it comes to making decisions, we humans aren’t always independent thinkers. From buying our morning coffee to big-ticket items like a new car, we depend on our network’s opinions, advice, or perspectives for making the right decision. With the internet, those networks get way, way bigger. We’re no longer confined to just friends, family, and coworkers—we can see what people all around the world think with just a quick Google search. And these customer reviews hold serious weight with shoppers. Online reviews—either positive or negative—can impact over 93% of consumers’ decisions.1 While reviews can accumulate on their own, they shouldn’t exist in a vacuum. Knowing how to ask for reviews, leverage them to get more business, and respond to less-than-favorable customer testimonials can improve your business image and land you more long-lasting customers. ",
+                    "Ulasan daring—baik positif maupun negatif—dapat memengaruhi lebih dari 93% keputusan konsumen. Meskipun ulasan dapat terkumpul dengan sendirinya, ulasan tersebut tidak boleh ada begitu saja. Mengetahui cara meminta ulasan, memanfaatkannya untuk mendapatkan lebih banyak bisnis, dan menanggapi testimoni pelanggan yang kurang baik dapat meningkatkan citra bisnis Anda dan mendatangkan lebih banyak pelanggan tetap.",
                     overflow: TextOverflow.ellipsis,
                     maxLines: 6,
                     textAlign: TextAlign.start,

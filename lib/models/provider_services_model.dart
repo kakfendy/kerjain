@@ -12,10 +12,10 @@ class ProviderServicesModel {
 
 List<ProviderServicesModel> getProviderServices() {
   List<ProviderServicesModel> list = [];
-  list.add(ProviderServicesModel(sofa, "Sofa Cleaning", 750));
-  list.add(ProviderServicesModel(kitchen, "Kitchen Cleaning", 1000));
-  list.add(ProviderServicesModel(bathroom, "Bathroom Cleaning", 1250));
-  list.add(ProviderServicesModel(carpet, "Carpet Cleaning", 750));
-  list.add(ProviderServicesModel(home, "Full House Cleaning", 1000));
+  list.add(ProviderServicesModel(sofa, "Pembersihkan Sofa", 750));
+  list.add(ProviderServicesModel(kitchen, "Pembersihkan Dapur", 1000));
+  list.add(ProviderServicesModel(bathroom, "Pembersihkan Kamar Mandi", 1250));
+  list.add(ProviderServicesModel(carpet, "Pembersihkan Karpet", 750));
+  list.add(ProviderServicesModel(home, "Pembersihkan Full House", 1000));
   return list;
 }

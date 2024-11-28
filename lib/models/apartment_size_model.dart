@@ -12,12 +12,12 @@ class ApartmentSizeModel {
 
 List<ApartmentSizeModel> getApartmentSize() {
   List<ApartmentSizeModel> list = [];
-  list.add(ApartmentSizeModel("1 BHK", false));
-  list.add(ApartmentSizeModel("2 BHK", false));
-  list.add(ApartmentSizeModel("2.5 BHK", false));
-  list.add(ApartmentSizeModel("3 BHK", false));
-  list.add(ApartmentSizeModel("3.5 BHK", false));
-  list.add(ApartmentSizeModel("4 BHK", false));
-  list.add(ApartmentSizeModel("4.5 BHK", false));
+  list.add(ApartmentSizeModel("1  Ruang", false));
+  list.add(ApartmentSizeModel("2  Ruang", false));
+  list.add(ApartmentSizeModel("2.5  Ruang", false));
+  list.add(ApartmentSizeModel("3  Ruang", false));
+  list.add(ApartmentSizeModel("3.5  Ruang", false));
+  list.add(ApartmentSizeModel("4  Ruang", false));
+  list.add(ApartmentSizeModel("4.5  Ruang", false));
   return list;
 }

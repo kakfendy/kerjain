@@ -142,7 +142,7 @@ class _ServiceScreenState extends State<ServiceScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "\$ ${serviceProviders[widget.serviceIndex].serviceProviders[widget.providerIndex].providerServices[widget.index].servicePrice}",
+                    "\Rp ${serviceProviders[widget.serviceIndex].serviceProviders[widget.providerIndex].providerServices[widget.index].servicePrice}",
                     style: TextStyle(
                       fontSize: 18,
                       color: appData.isDark
@@ -167,7 +167,7 @@ class _ServiceScreenState extends State<ServiceScreen> {
                           "Dedi Cleaning Services",
                           selectedDate,
                           _time.format(context),
-                          "In Process",
+                          "Dalam Proses",
                           serviceProviders[widget.serviceIndex]
                               .serviceProviders[widget.providerIndex]
                               .providerServices[widget.index]
@@ -190,7 +190,7 @@ class _ServiceScreenState extends State<ServiceScreen> {
                       );
                     },
                     child: Text(
-                      "Continue",
+                      "Lanjut",
                       style: TextStyle(
                         color: appData.isDark
                             ? bottomContainerTextDark
@@ -253,13 +253,13 @@ class _ServiceScreenState extends State<ServiceScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Text("Apartment Size",
+                  Text("Ukuran Ruangan",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
                   Space(16),
                   ApartmentSizeComponent(),
                   Space(16),
-                  Text("Area in Sqft",
+                  Text("Meter Persegi",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
                   Space(16),
@@ -268,7 +268,7 @@ class _ServiceScreenState extends State<ServiceScreen> {
                     style: TextStyle(fontSize: 16),
                     inputFormatters: [LengthLimitingTextInputFormatter(4)],
                     decoration: commonInputDecoration(
-                      hintText: "Area in  squre fit",
+                      hintText: "Luas dalam meter persegi",
                       suffixIcon: Icon(Icons.add, size: 16),
                     ),
                     onChanged: (value) {
@@ -276,7 +276,7 @@ class _ServiceScreenState extends State<ServiceScreen> {
                     },
                   ),
                   Space(16),
-                  Text("Pick a date",
+                  Text("Jadwalkan Hari",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
                   Space(16),
@@ -399,14 +399,14 @@ class _ServiceScreenState extends State<ServiceScreen> {
                     ),
                   ),
                   Space(16),
-                  Text("Pick a Time",
+                  Text("Jadwalkan Waktu",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
                   Space(8),
                   Text('Selected time: ${_time.format(context)}'),
                   Space(8),
                   ElevatedButton(
-                      onPressed: _selectTime, child: Text('SELECT TIME')),
+                      onPressed: _selectTime, child: Text('Pilih Waktu')),
                   Padding(
                       padding: EdgeInsets.all(8),
                       child: SizedBox(

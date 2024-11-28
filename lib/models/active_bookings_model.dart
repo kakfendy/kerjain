@@ -19,16 +19,16 @@ class ActiveBookingsModel {
 List<ActiveBookingsModel> getActiveBooking() {
   List<ActiveBookingsModel> list = List.empty(growable: true);
   list.add(
-    ActiveBookingsModel(0, "Full House Cleaning", home,
-        "Jono Cleaning Services", "Jan 4,2022", "4am", "In Process", 2599),
+    ActiveBookingsModel(0, "Pembersihkan Full House", home,
+        "Jono Cleaning Services", "Jan 4,2022", "4am", "Dalam Proses", 2599),
   );
   list.add(
-    ActiveBookingsModel(1, "Kitchen Cleaning", home,
-        "Susanti Cleaning Services", "Dec 4,2022", "6am", "Assigned", 3000),
+    ActiveBookingsModel(1, "Pembersihkan Dapur", home,
+        "Susanti Cleaning Services", "Dec 4,2022", "6am", "Dijadwalkan", 3000),
   );
   list.add(
-    ActiveBookingsModel(2, "Bedroom Cleaning", home, "Dedi Cleaning Services",
-        "Feb 17,2022", "6am", "Assigned", 2499),
+    ActiveBookingsModel(2, "Pembersihan Kamar", home, "Dedi Cleaning Services",
+        "Feb 17,2022", "6am", "Dijadwalkan", 2499),
   );
   return list;
 }

@@ -91,7 +91,7 @@ class _ProviderServicesScreenState extends State<ProviderServicesScreen> {
                           MediaQuery.of(context).size.height * 0.06),
                       shape: StadiumBorder(),
                     ),
-                    child: Text("Book",
+                    child: Text("Jadwalkan",
                         style: TextStyle(fontWeight: FontWeight.bold)),
                     onPressed: () {
                       Navigator.push(
@@ -134,7 +134,7 @@ class _ProviderServicesScreenState extends State<ProviderServicesScreen> {
                 background: Image.asset(room, fit: BoxFit.cover)),
             centerTitle: true,
             title: Text(
-              "Home Cleaning",
+              "Tenaga Kebersihan",
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: _textColor, fontWeight: FontWeight.w900, fontSize: 20),
@@ -201,7 +201,7 @@ class _ProviderServicesScreenState extends State<ProviderServicesScreen> {
                               ),
                               Space(4),
                               Text(
-                                "Rp.${serviceProviders[widget.serviceIndex].serviceProviders[widget.index].providerServices[index].servicePrice} onwards",
+                                "Rp.${serviceProviders[widget.serviceIndex].serviceProviders[widget.index].providerServices[index].servicePrice} per layanan",
                                 style: TextStyle(
                                     color: greyColor,
                                     fontWeight: FontWeight.w900,

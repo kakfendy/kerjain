@@ -35,8 +35,10 @@ class _HomeFragmentState extends State<HomeFragment> {
   double aspectRatio = 0.0;
   List<String> bannerList = [banner1, banner2, banner];
 
-  final offerPagesController = PageController(viewportFraction: 0.93, keepPage: true, initialPage: 1);
-  final reviewPagesController = PageController(viewportFraction: 0.93, keepPage: true, initialPage: 1);
+  final offerPagesController =
+      PageController(viewportFraction: 0.93, keepPage: true, initialPage: 1);
+  final reviewPagesController =
+      PageController(viewportFraction: 0.93, keepPage: true, initialPage: 1);
 
   @override
   void dispose() {
@@ -52,19 +54,19 @@ class _HomeFragmentState extends State<HomeFragment> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text(
-            'Are you sure you want to Logout?',
+            'Apakah Anda yakin ingin LogOut?',
             textAlign: TextAlign.center,
             style: TextStyle(fontWeight: FontWeight.normal, fontSize: 16),
           ),
           actions: [
             TextButton(
-              child: Text('No'),
+              child: Text('Tidak'),
               onPressed: () {
                 Navigator.of(context).pop();
               },
             ),
             TextButton(
-              child: Text('Yes'),
+              child: Text('Ya'),
               onPressed: () {
                 Navigator.pushAndRemoveUntil(
                   context,
@@ -119,7 +121,8 @@ class _HomeFragmentState extends State<HomeFragment> {
           padding: EdgeInsets.all(0),
           children: [
             Container(
-              padding: EdgeInsets.only(left: 24, right: 24, top: 40, bottom: 24),
+              padding:
+                  EdgeInsets.only(left: 24, right: 24, top: 40, bottom: 24),
               color: appData.isDark ? Colors.black : Colors.white,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -128,7 +131,9 @@ class _HomeFragmentState extends State<HomeFragment> {
                     padding: EdgeInsets.all(16),
                     child: Text(
                       "J",
-                      style: TextStyle(fontSize: 24.0, color: appData.isDark ? Colors.black : whiteColor),
+                      style: TextStyle(
+                          fontSize: 24.0,
+                          color: appData.isDark ? Colors.black : whiteColor),
                       textAlign: TextAlign.center,
                     ),
                     decoration: BoxDecoration(
@@ -139,7 +144,10 @@ class _HomeFragmentState extends State<HomeFragment> {
                   Space(4),
                   Text(
                     getName,
-                    style: TextStyle(fontSize: 18, color: appData.isDark ? whiteColor : Colors.black, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        fontSize: 18,
+                        color: appData.isDark ? whiteColor : Colors.black,
+                        fontWeight: FontWeight.bold),
                   ),
                   Space(4),
                   Text(getEmail, style: TextStyle(color: secondaryColor)),
@@ -147,55 +155,64 @@ class _HomeFragmentState extends State<HomeFragment> {
               ),
             ),
             drawerWidget(
-              drawerTitle: "My Profile",
+              drawerTitle: "Profil Saya",
               drawerIcon: Icons.person,
               drawerOnTap: () {
                 Navigator.pop(context);
-                Navigator.push(context, MaterialPageRoute(builder: (context) => MyProfileScreen()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MyProfileScreen()));
               },
             ),
             drawerWidget(
-              drawerTitle: "My Favourites",
+              drawerTitle: "Favorit Saya",
               drawerIcon: Icons.favorite,
               drawerOnTap: () {
                 Navigator.pop(context);
-                Navigator.push(context, MaterialPageRoute(builder: (context) => FavouriteProvidersScreen()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => FavouriteProvidersScreen()));
               },
             ),
             drawerWidget(
-              drawerTitle: "Notifications",
+              drawerTitle: "Notifikasi",
               drawerIcon: Icons.notifications,
               drawerOnTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationScreen()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => NotificationScreen()));
               },
             ),
             drawerWidget(
-              drawerTitle: "My bookings",
+              drawerTitle: "Pesanan Saya",
               drawerIcon: Icons.calendar_month,
               drawerOnTap: () {
                 Navigator.pop(context);
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BookingsFragment(fromProfile: true)),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          BookingsFragment(fromProfile: true)),
                 );
               },
             ),
             drawerWidget(
-              drawerTitle: "Refer and earn",
+              drawerTitle: "Bagikan Refer",
               drawerIcon: Icons.paid_rounded,
               drawerOnTap: () {
                 Navigator.pop(context);
               },
             ),
             drawerWidget(
-              drawerTitle: "Contact Us",
+              drawerTitle: "Hubungi Kami",
               drawerIcon: Icons.mail,
               drawerOnTap: () {
                 Navigator.pop(context);
               },
             ),
             drawerWidget(
-              drawerTitle: "Help Center",
+              drawerTitle: "Pusat Bantuan",
               drawerIcon: Icons.question_mark_rounded,
               drawerOnTap: () {
                 Navigator.pop(context);
@@ -222,8 +239,10 @@ class _HomeFragmentState extends State<HomeFragment> {
                   keyboardType: TextInputType.name,
                   style: TextStyle(fontSize: 17),
                   decoration: commonInputDecoration(
-                    suffixIcon: Icon(Icons.search, size: 20, color: appData.isDark ? Colors.white : Colors.black),
-                    hintText: "Search for services",
+                    suffixIcon: Icon(Icons.search,
+                        size: 20,
+                        color: appData.isDark ? Colors.white : Colors.black),
+                    hintText: "Butuh Layanan Apa?",
                   ),
                 ),
               ),
@@ -239,14 +258,17 @@ class _HomeFragmentState extends State<HomeFragment> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => ServiceProvidersScreen(index: index)),
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                ServiceProvidersScreen(index: index)),
                       );
                     },
                     child: Padding(
                       padding: EdgeInsets.all(8),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
-                        child: Image.asset(bannerList[index], fit: BoxFit.cover),
+                        child:
+                            Image.asset(bannerList[index], fit: BoxFit.cover),
                       ),
                     ),
                   );
@@ -265,12 +287,13 @@ class _HomeFragmentState extends State<HomeFragment> {
             ),
             Space(8),
             homeTitleWidget(
-              titleText: "Home Services",
+              titleText: "Layanan Rumah",
               onAllTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AllCategoriesScreen(list: serviceProviders, fromProviderDetails: false),
+                    builder: (context) => AllCategoriesScreen(
+                        list: serviceProviders, fromProviderDetails: false),
                   ),
                 );
               },
@@ -278,12 +301,13 @@ class _HomeFragmentState extends State<HomeFragment> {
             HomeServiceComponent(),
             Space(16),
             homeTitleWidget(
-              titleText: "Home Construction",
+              titleText: "Konstruksi Rumah",
               onAllTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AllCategoriesScreen(list: serviceProviders, fromProviderDetails: false),
+                    builder: (context) => AllCategoriesScreen(
+                        list: serviceProviders, fromProviderDetails: false),
                   ),
                 );
               },
@@ -291,12 +315,13 @@ class _HomeFragmentState extends State<HomeFragment> {
             HomeConstructionComponent(),
             Space(16),
             homeTitleWidget(
-              titleText: "Popular Services",
+              titleText: "Layanan Populer",
               onAllTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AllCategoriesScreen(list: serviceProviders, fromProviderDetails: false),
+                    builder: (context) => AllCategoriesScreen(
+                        list: serviceProviders, fromProviderDetails: false),
                   ),
                 );
               },
@@ -305,12 +330,13 @@ class _HomeFragmentState extends State<HomeFragment> {
             PopularServiceComponent(),
             Space(24),
             homeTitleWidget(
-              titleText: "Renovate your home",
+              titleText: "Renovasi Rumahmu",
               onAllTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AllCategoriesScreen(list: serviceProviders, fromProviderDetails: false),
+                    builder: (context) => AllCategoriesScreen(
+                        list: serviceProviders, fromProviderDetails: false),
                   ),
                 );
               },
@@ -319,12 +345,13 @@ class _HomeFragmentState extends State<HomeFragment> {
             RenovateHomeComponent(),
             Space(24),
             homeTitleWidget(
-              titleText: "Combos And Subscriptions",
+              titleText: "Paket Kombo Plus",
               onAllTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AllCategoriesScreen(list: serviceProviders, fromProviderDetails: false),
+                    builder: (context) => AllCategoriesScreen(
+                        list: serviceProviders, fromProviderDetails: false),
                   ),
                 );
               },
@@ -337,7 +364,7 @@ class _HomeFragmentState extends State<HomeFragment> {
               child: Padding(
                 padding: EdgeInsets.only(left: 20),
                 child: Text(
-                  "What our customers say",
+                  "Bagaimana Kata Mereka?",
                   style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18),
                 ),
               ),
@@ -350,7 +377,8 @@ class _HomeFragmentState extends State<HomeFragment> {
                 controller: reviewPagesController,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
-                  return CustomerReviewComponent(customerReviewModel: customerReviews[index]);
+                  return CustomerReviewComponent(
+                      customerReviewModel: customerReviews[index]);
                 },
               ),
             ),

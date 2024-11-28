@@ -26,7 +26,7 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
         elevation: 0,
         backgroundColor: transparent,
         title: Text(
-          "My Profile",
+          "Profil Saya",
           textAlign: TextAlign.center,
           style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
         ),
@@ -42,7 +42,7 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                 fixedSize: Size(MediaQuery.of(context).size.width, 45),
                 shape: StadiumBorder(),
               ),
-              child: Text("Save", style: TextStyle(fontSize: 16)),
+              child: Text("Simpan", style: TextStyle(fontSize: 16)),
               onPressed: () {
                 if (customerName != "") {
                   setName(customerName);
@@ -74,7 +74,7 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
           ProfileWidget(imagePath: userImage, onClicked: () {}),
           SizedBox(height: 20),
           TextFieldWidget(
-            label: "Full Name",
+            label: "Nama Lengkap",
             text: getName,
             onChanged: (name) {
               customerName = name;
@@ -90,7 +90,7 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
           ),
           SizedBox(height: 15),
           TextFieldWidget(
-            label: "About",
+            label: "Akun",
             text: getAbout,
             maxLines: 5,
             onChanged: (about) {

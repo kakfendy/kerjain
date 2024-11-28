@@ -8,7 +8,8 @@ class FavouriteProvidersScreen extends StatefulWidget {
   const FavouriteProvidersScreen({Key? key}) : super(key: key);
 
   @override
-  State<FavouriteProvidersScreen> createState() => _FavouriteProvidersScreenState();
+  State<FavouriteProvidersScreen> createState() =>
+      _FavouriteProvidersScreenState();
 }
 
 class _FavouriteProvidersScreenState extends State<FavouriteProvidersScreen> {
@@ -20,7 +21,7 @@ class _FavouriteProvidersScreenState extends State<FavouriteProvidersScreen> {
         elevation: 0,
         backgroundColor: transparent,
         title: Text(
-          "Favorite Service Providers",
+          "Teknisi Favorit",
           textAlign: TextAlign.center,
           style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
         ),

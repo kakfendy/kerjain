@@ -26,7 +26,7 @@ class _AccountFragmentState extends State<AccountFragment> {
         elevation: 0,
         backgroundColor: transparent,
         title: Text(
-          "Account",
+          "Akun",
           textAlign: TextAlign.center,
           style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
         ),
@@ -35,54 +35,72 @@ class _AccountFragmentState extends State<AccountFragment> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 90, width: 90, child: CircleAvatar(backgroundImage: AssetImage(userImage))),
+            SizedBox(
+                height: 90,
+                width: 90,
+                child: CircleAvatar(backgroundImage: AssetImage(userImage))),
             Space(8),
-            Text(getName, textAlign: TextAlign.start, style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20)),
+            Text(getName,
+                textAlign: TextAlign.start,
+                style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20)),
             Space(4),
-            Text(getEmail, textAlign: TextAlign.start, style: TextStyle(color: secondaryColor, fontSize: 12)),
+            Text(getEmail,
+                textAlign: TextAlign.start,
+                style: TextStyle(color: secondaryColor, fontSize: 12)),
             Space(16),
             ListTile(
               horizontalTitleGap: 4,
               leading: Icon(Icons.person, size: 20),
               contentPadding: EdgeInsets.symmetric(horizontal: 16),
-              title: Text("My Profile"),
+              title: Text("Profil Saya"),
               trailing: Icon(Icons.edit, size: 16),
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => MyProfileScreen()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MyProfileScreen()));
               },
             ),
             ListTile(
               horizontalTitleGap: 4,
               contentPadding: EdgeInsets.symmetric(horizontal: 16),
               leading: Icon(Icons.favorite, size: 20),
-              title: Text("My Favourites", style: TextStyle()),
+              title: Text("Favorit Saya", style: TextStyle()),
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => FavouriteProvidersScreen()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => FavouriteProvidersScreen()));
               },
             ),
             ListTile(
               horizontalTitleGap: 4,
               contentPadding: EdgeInsets.symmetric(horizontal: 16),
               leading: Icon(Icons.notifications, size: 20),
-              title: Text("Notifications"),
+              title: Text("Notifikasi"),
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationScreen()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => NotificationScreen()));
               },
             ),
             ListTile(
               horizontalTitleGap: 4,
               contentPadding: EdgeInsets.symmetric(horizontal: 16),
               leading: Icon(Icons.calendar_month, size: 20),
-              title: Text("My bookings"),
+              title: Text("Pesanan Saya"),
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => BookingsFragment(fromProfile: true)));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            BookingsFragment(fromProfile: true)));
               },
             ),
             ListTile(
               horizontalTitleGap: 4,
               contentPadding: EdgeInsets.symmetric(horizontal: 16),
               leading: Icon(Icons.paid_rounded, size: 20),
-              title: Text("Refer and earn"),
+              title: Text("Bagikan Refer"),
               onTap: () {
                 //
               },
@@ -91,7 +109,7 @@ class _AccountFragmentState extends State<AccountFragment> {
               horizontalTitleGap: 4,
               contentPadding: EdgeInsets.symmetric(horizontal: 16),
               leading: Icon(Icons.mail, size: 20),
-              title: Text("Contact Us"),
+              title: Text("Hubungi Kami"),
               onTap: () {
                 //
               },
@@ -100,7 +118,7 @@ class _AccountFragmentState extends State<AccountFragment> {
               horizontalTitleGap: 4,
               contentPadding: EdgeInsets.symmetric(horizontal: 16),
               leading: Icon(Icons.question_mark, size: 20),
-              title: Text("Help Center"),
+              title: Text("Pusat Bantuan"),
               onTap: () {
                 //
               },
@@ -109,7 +127,7 @@ class _AccountFragmentState extends State<AccountFragment> {
               horizontalTitleGap: 4,
               contentPadding: EdgeInsets.symmetric(horizontal: 16),
               leading: Icon(Icons.local_offer, size: 20),
-              title: Text("Offers And Coupons"),
+              title: Text("Promo dan Kupon"),
               onTap: () {
                 //
               },

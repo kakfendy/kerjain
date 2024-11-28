@@ -12,11 +12,11 @@ class UpiPayment {
 List<UpiPayment> upiPaymentList() {
   List<UpiPayment> dataList = [];
 
-  dataList.add(UpiPayment(paymentUrl: paytm, PaymentName: "Paytm"));
-  dataList.add(UpiPayment(paymentUrl: phonePay, PaymentName: "PhonePe"));
-  dataList.add(UpiPayment(paymentUrl: amazonPay, PaymentName: "Amazon Pay"));
-  dataList.add(UpiPayment(paymentUrl: freeCharge, PaymentName: "Free charge"));
-  dataList.add(UpiPayment(paymentUrl: olaMoney, PaymentName: "Ola Money"));
+  dataList.add(UpiPayment(paymentUrl: paytm, PaymentName: "Gopay"));
+  dataList.add(UpiPayment(paymentUrl: phonePay, PaymentName: "OVO"));
+  dataList.add(UpiPayment(paymentUrl: amazonPay, PaymentName: "ShopeePay"));
+  dataList.add(UpiPayment(paymentUrl: freeCharge, PaymentName: "DANA"));
+  dataList.add(UpiPayment(paymentUrl: olaMoney, PaymentName: "KerjaPayLater"));
 
   return dataList;
 }

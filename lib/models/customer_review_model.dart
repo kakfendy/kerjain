@@ -20,25 +20,25 @@ List<CustomerReviewModel> getCustomerReviews() {
       1,
       "Aji Effendy",
       3,
-      "Good for you and My experience was great, I use it daily and like the app very much.Good for you and My experience was great, I use it daily and like the app very much.Good for you and My experience was great, I use it daily and like the app very much.",
+      "Aplikasi ini luar biasa! Pengalaman saya menggunakannya sangat memuaskan. Saya memakainya setiap hari dan benar-benar menyukainya. Sangat membantu dan menyenangkan untuk digunakan dalam aktivitas sehari-hari!",
       contractor,
     ),
   );
   list.add(
     CustomerReviewModel(
       2,
-      "Santoso",
+      "Santoso Eko Prasetyo",
       4,
-      "Best App for services and I find it easy to solve all my house task with this app.I like the app very much",
+      "Aplikasi terbaik untuk layanan, dan saya merasa sangat mudah menyelesaikan semua tugas rumah tangga saya dengan aplikasi ini. Saya sangat menyukai aplikasi ini!",
       painter,
     ),
   );
   list.add(
     CustomerReviewModel(
       3,
-      "Lain Caster",
+      "Linda Subandi",
       5,
-      "Good for you and My experience was great, I use it daily and like the app very much.Good for you and My experience was great, I use it daily and like the app very much.Good for you and My experience was great, I use it daily and like the app very much.",
+      "Aplikasi ini luar biasa! Pengalaman saya menggunakannya sangat memuaskan. Saya memakainya setiap hari dan benar-benar menyukainya. Sangat membantu dan menyenangkan untuk digunakan dalam aktivitas sehari-hari!",
       painter1,
     ),
   );

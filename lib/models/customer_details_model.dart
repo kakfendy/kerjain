@@ -1,7 +1,7 @@
 String name = "Aji Effendy";
 String email = "ajieffendy@gmail.com";
 String about =
-    "I am great to accept any service at free of cost. Provider please contact me if any issue is faced. Thank you.";
+    "Saya senang menerima tugas pekerjaan apa pun. Jika ada masalah, silakan hubungi saya. Terima kasih.";
 
 String get getName => name;
 

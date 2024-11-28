@@ -5,8 +5,9 @@ List<CommonModel> combosServices = getCombosServices();
 
 List<CommonModel> getCombosServices() {
   List<CommonModel> combosServices = [];
-  combosServices.add(CommonModel.withoutIcon("Pest Control", cleaning));
-  combosServices.add(CommonModel.withoutIcon("Full House Cleaning", home));
-  combosServices.add(CommonModel.withoutIcon("Kitchen & Bathroom Cleaning", kitchen));
+  combosServices.add(CommonModel.withoutIcon("Pengendalian Hama", cleaning));
+  combosServices.add(CommonModel.withoutIcon("Pembersihkan Full House", home));
+  combosServices
+      .add(CommonModel.withoutIcon("Pembersihan Dapur & Kamar Mandi", kitchen));
   return combosServices;
 }

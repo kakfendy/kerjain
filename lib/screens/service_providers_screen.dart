@@ -42,7 +42,7 @@ class _ServiceProvidersScreenState extends State<ServiceProvidersScreen> {
         iconTheme:
             IconThemeData(color: appData.isDark ? whiteColor : blackColor),
         title: Text(
-          "Service Providers",
+          "Tenaga Layanan Kami",
           textAlign: TextAlign.center,
           style: TextStyle(
               fontWeight: FontWeight.w900,
@@ -186,7 +186,7 @@ class _ServiceProvidersScreenState extends State<ServiceProvidersScreen> {
                                               fontSize: 20),
                                         ),
                                         Text(
-                                          "/hr ",
+                                          "/jam",
                                           textAlign: TextAlign.start,
                                           style: TextStyle(
                                               fontWeight: FontWeight.w900,
@@ -196,7 +196,7 @@ class _ServiceProvidersScreenState extends State<ServiceProvidersScreen> {
                                     ),
                                     Space(8),
                                     ElevatedButton(
-                                      child: Text("Book",
+                                      child: Text("Jadwalkan",
                                           textAlign: TextAlign.center,
                                           style:
                                               TextStyle(color: Colors.white)),

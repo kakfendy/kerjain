@@ -18,7 +18,7 @@ class PaymentScreen extends StatefulWidget {
   State<PaymentScreen> createState() => _PaymentScreenState();
 
   void setDate() {
-    list[0].date = "13 January,2023";
+    list[0].date = "04 November,2024";
   }
 }
 
@@ -39,7 +39,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
         elevation: 0,
         backgroundColor: transparent,
         title: Text(
-          "Payment",
+          "Pembayaran",
           textAlign: TextAlign.center,
           style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
         ),
@@ -88,7 +88,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       );
                     },
                     child: Text(
-                      "Pay",
+                      "Bayar",
                       style: TextStyle(
                         color: appData.isDark
                             ? bottomContainerTextDark
@@ -109,17 +109,18 @@ class _PaymentScreenState extends State<PaymentScreen> {
         child: Column(
           children: [
             PaymentContainer(
-                title: "Credit & Debit Cards", icon: Icons.credit_card),
+                title: "Kartu Kredit & Debit", icon: Icons.credit_card),
             Space(16),
-            PaymentContainer(title: "Net Banking", icon: Icons.food_bank),
+            PaymentContainer(title: "Transfer Bank", icon: Icons.food_bank),
+            Space(16),
+            PaymentContainer(title: "COD", icon: Icons.delivery_dining),
+            Space(16),
+            PaymentContainer(title: "KerjaPay", icon: Icons.wallet),
             Space(16),
             PaymentContainer(
-                title: "Cash On Delivery", icon: Icons.delivery_dining),
-            Space(16),
-            PaymentContainer(title: "Wallets", icon: Icons.wallet),
-            Space(16),
-            PaymentContainer(
-                title: "UPIs", icon: Icons.book_online_rounded, isUpi: true),
+                title: "e-Wallets",
+                icon: Icons.book_online_rounded,
+                isUpi: true),
             Space(55),
           ],
         ),

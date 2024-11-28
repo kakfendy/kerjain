@@ -44,7 +44,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "OTP Verification",
+                    "Verifikasi OTP",
                     style: TextStyle(
                         fontSize: mainTitleTextSize,
                         fontWeight: FontWeight.bold),

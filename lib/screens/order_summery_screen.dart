@@ -20,8 +20,8 @@ class OrderSummeryScreen extends StatefulWidget {
   OrderSummeryScreen({
     Key? key,
     this.area = "1590",
-    this.bHK = "3 BHK",
-    this.weekday = "Thursday",
+    this.bHK = "3  Ruang",
+    this.weekday = "Minggu",
     required this.list,
     this.fromBooking = false,
     this.fromRenovate = false,
@@ -64,7 +64,7 @@ class _OrderSummeryScreenState extends State<OrderSummeryScreen> {
         elevation: 0,
         backgroundColor: transparent,
         title: Text(
-          "Order Summery",
+          "Pesanan Anda",
           textAlign: TextAlign.center,
           style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
         ),
@@ -89,7 +89,7 @@ class _OrderSummeryScreenState extends State<OrderSummeryScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "\$ ${price.toString()}",
+                    "\Rp ${price.toString()}",
                     style: TextStyle(
                       color: appData.isDark
                           ? bottomContainerTextDark
@@ -105,7 +105,7 @@ class _OrderSummeryScreenState extends State<OrderSummeryScreen> {
                         MaterialPageRoute(
                           builder: (context) => PaymentScreen(
                             weekday: widget.weekday == ""
-                                ? "Thursday"
+                                ? "Minggu"
                                 : widget.weekday,
                             list: widget.list,
                           ),
@@ -113,7 +113,7 @@ class _OrderSummeryScreenState extends State<OrderSummeryScreen> {
                       );
                     },
                     child: Text(
-                      "Proceed to Pay",
+                      "Lanjutkan Pembayaran",
                       style: TextStyle(
                         color: appData.isDark
                             ? bottomContainerTextDark
@@ -197,7 +197,7 @@ class _OrderSummeryScreenState extends State<OrderSummeryScreen> {
                                             fontWeight: FontWeight.bold,
                                             fontSize: 10)),
                                     Space(2),
-                                    Text("on",
+                                    Text("pada",
                                         style: TextStyle(
                                             color: appData.isDark
                                                 ? cardTextDark
@@ -207,7 +207,7 @@ class _OrderSummeryScreenState extends State<OrderSummeryScreen> {
                                     Text(
                                       widget.weekday != ""
                                           ? widget.weekday
-                                          : "Thursday",
+                                          : "Minggu",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 10),
@@ -276,8 +276,8 @@ class _OrderSummeryScreenState extends State<OrderSummeryScreen> {
                             children: [
                               Text(
                                 widget.area != ""
-                                    ? "${widget.area} Sqft"
-                                    : "2000 Sqft",
+                                    ? "${widget.area} Meter Persegi"
+                                    : "2000 Meter Persegi",
                                 style: TextStyle(
                                   color:
                                       appData.isDark ? cardTextDark : cardText,
@@ -290,7 +290,7 @@ class _OrderSummeryScreenState extends State<OrderSummeryScreen> {
                                   color:
                                       appData.isDark ? cardTextDark : cardText),
                               Text(
-                                widget.bHK != "" ? widget.bHK : "1 BHK",
+                                widget.bHK != "" ? widget.bHK : "1  Ruang",
                                 style: TextStyle(
                                   color:
                                       appData.isDark ? cardTextDark : cardText,
@@ -326,14 +326,14 @@ class _OrderSummeryScreenState extends State<OrderSummeryScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Address",
+                            "Alamat",
                             textAlign: TextAlign.start,
                             style: TextStyle(
                                 fontWeight: FontWeight.w900, fontSize: 18),
                           ),
                           Space(4),
                           Text(
-                            "2nd Street,Shushruthi Nagar,E City",
+                            "Perum ITS Blok U, Surabaya",
                             textAlign: TextAlign.start,
                             style: TextStyle(
                               color: appData.isDark ? cardTextDark : cardText,
@@ -364,7 +364,7 @@ class _OrderSummeryScreenState extends State<OrderSummeryScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Apply Coupon",
+                          "Voucher",
                           textAlign: TextAlign.start,
                           style: TextStyle(
                               fontWeight: FontWeight.w900, fontSize: 18),
@@ -394,7 +394,7 @@ class _OrderSummeryScreenState extends State<OrderSummeryScreen> {
                   children: [
                     ExpansionTile(
                       title: Text(
-                        "Detailed Bill",
+                        "Tagihan",
                         textAlign: TextAlign.start,
                         style: TextStyle(
                             fontWeight: FontWeight.w900, fontSize: 18),
@@ -415,27 +415,27 @@ class _OrderSummeryScreenState extends State<OrderSummeryScreen> {
                         ),
                         ListTile(
                           title: Text(
-                            "GST",
+                            "Pajak",
                             textAlign: TextAlign.start,
                             style: TextStyle(
                                 color: appData.isDark ? cardTextDark : cardText,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 14),
                           ),
-                          trailing: Text("Rp40",
+                          trailing: Text("Rp40000",
                               textAlign: TextAlign.start,
                               style: TextStyle(fontSize: 14)),
                         ),
                         ListTile(
                           title: Text(
-                            "Coupon Discount",
+                            "Kupon Discount",
                             textAlign: TextAlign.start,
                             style: TextStyle(
                                 color: appData.isDark ? cardTextDark : cardText,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 14),
                           ),
-                          trailing: Text("- Rp160",
+                          trailing: Text("- Rp1600",
                               textAlign: TextAlign.start,
                               style: TextStyle(fontSize: 14)),
                         ),

@@ -20,7 +20,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
         elevation: 0,
         backgroundColor: transparent,
         title: Text(
-          "Notification",
+          "Notifikasi",
           textAlign: TextAlign.center,
           style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
         ),
@@ -33,7 +33,8 @@ class _NotificationScreenState extends State<NotificationScreen> {
             padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             child: Card(
                 color: appData.isDark ? cardColorDark : cardColor,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8)),
                 child: Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Row(
@@ -43,14 +44,17 @@ class _NotificationScreenState extends State<NotificationScreen> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Home Hub", style: TextStyle(fontWeight: FontWeight.bold)),
+                          Text("Kebutuhan Rumah",
+                              style: TextStyle(fontWeight: FontWeight.bold)),
                           Space(8),
                           Text(
-                            "Thank you for order service using this app",
+                            "Terima kasih atas pesanan Anda!",
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.normal,
-                              color: appData.isDark ? Colors.white70 : Colors.grey.withOpacity(0.6),
+                              color: appData.isDark
+                                  ? Colors.white70
+                                  : Colors.grey.withOpacity(0.6),
                             ),
                           ),
                         ],

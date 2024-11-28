@@ -6,14 +6,17 @@ import 'package:home_hub/utils/colors.dart';
 class BookingsFragment extends StatefulWidget {
   final bool fromProfile;
 
-  const BookingsFragment({Key? key, required this.fromProfile}) : super(key: key);
+  const BookingsFragment({Key? key, required this.fromProfile})
+      : super(key: key);
 
   @override
   State<BookingsFragment> createState() => _BookingsFragmentState();
 }
 
-class _BookingsFragmentState extends State<BookingsFragment> with SingleTickerProviderStateMixin {
-  late TabController bookingTabController = TabController(length: 2, vsync: this, initialIndex: 0);
+class _BookingsFragmentState extends State<BookingsFragment>
+    with SingleTickerProviderStateMixin {
+  late TabController bookingTabController =
+      TabController(length: 2, vsync: this, initialIndex: 0);
 
   @override
   void dispose() {
@@ -39,7 +42,7 @@ class _BookingsFragmentState extends State<BookingsFragment> with SingleTickerPr
           ),
         ),
         title: Text(
-          "Bookings",
+          "Pesanan",
           textAlign: TextAlign.center,
           style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
         ),
@@ -48,8 +51,8 @@ class _BookingsFragmentState extends State<BookingsFragment> with SingleTickerPr
           labelStyle: TextStyle(fontWeight: FontWeight.w900, fontSize: 18),
           indicatorColor: blackColor,
           tabs: [
-            Tab(text: "Active"),
-            Tab(text: "History"),
+            Tab(text: "Aktif"),
+            Tab(text: "Riwayat"),
           ],
         ),
       ),

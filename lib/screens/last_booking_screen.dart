@@ -14,9 +14,9 @@ class LastBookingScreen extends StatelessWidget {
   const LastBookingScreen({
     Key? key,
     this.cancel = false,
-    this.time = "07:15",
-    this.weekday = "Thursday",
-    this.date = "4 january,2022",
+    this.time = "18:15",
+    this.weekday = "Minggu",
+    this.date = "4 Agustus,2024",
   }) : super(key: key);
 
   @override
@@ -30,17 +30,20 @@ class LastBookingScreen extends StatelessWidget {
             padding: EdgeInsets.all(10),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                fixedSize: Size(MediaQuery.of(context).size.width, MediaQuery.of(context).size.height * 0.06),
+                fixedSize: Size(MediaQuery.of(context).size.width,
+                    MediaQuery.of(context).size.height * 0.06),
                 shape: StadiumBorder(),
               ),
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8.0),
-                child: Text("Go Back Home", style: TextStyle(fontSize: 16)),
+                child:
+                    Text("Kembali Ke Beranda", style: TextStyle(fontSize: 16)),
               ),
               onPressed: () {
                 Navigator.pushAndRemoveUntil(
                   context,
-                  MaterialPageRoute(builder: (BuildContext context) => DashBoardScreen()),
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => DashBoardScreen()),
                   (route) => false,
                 );
               },
@@ -59,18 +62,25 @@ class LastBookingScreen extends StatelessWidget {
                 padding: EdgeInsets.all(24),
                 decoration: BoxDecoration(
                   boxShadow: [
-                    BoxShadow(color: Colors.grey.withOpacity(0.2), blurRadius: 0.6, spreadRadius: 1),
+                    BoxShadow(
+                        color: Colors.grey.withOpacity(0.2),
+                        blurRadius: 0.6,
+                        spreadRadius: 1),
                   ],
                   color: appData.isDark ? Colors.black : whiteColor,
                   shape: BoxShape.circle,
                 ),
-                child: Icon(Icons.done, size: 80, color: appData.isDark ? whiteColor : blackColor),
+                child: Icon(Icons.done,
+                    size: 80, color: appData.isDark ? whiteColor : blackColor),
               ),
               Space(16),
-              Text(cancel ? "Cancelled!!" : "Confirmed", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 32)),
+              Text(cancel ? "Dibatalkan!!" : "Berhasil",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 32)),
               Space(32),
               Text(
-                cancel ? "Your booking has been cancelled successfully" : "Your booking has been confirmed for $date",
+                cancel
+                    ? "Pesanan Anda telah dibatalkan"
+                    : "Pesanan anda telah dikonfirmasi untuk tanggal $date",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 14, color: greyColor),
               ),
@@ -80,7 +90,7 @@ class LastBookingScreen extends StatelessWidget {
                   children: [
                     Space(8),
                     Text(
-                      "You will get an email with the booking details",
+                      "Detail pesanan akan dikirimkan via email",
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 14, color: Colors.grey),
                     ),
@@ -91,11 +101,16 @@ class LastBookingScreen extends StatelessWidget {
                       children: [
                         Icon(Icons.timer_outlined, color: greyColor),
                         Space(4),
-                        Text(time, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+                        Text(time,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 17)),
                         Space(4),
-                        Text("on", style: TextStyle(color: greyColor, fontSize: 13)),
+                        Text("pada",
+                            style: TextStyle(color: greyColor, fontSize: 13)),
                         Space(4),
-                        Text(weekday, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+                        Text(weekday,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 17)),
                       ],
                     )
                   ],

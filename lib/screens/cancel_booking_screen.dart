@@ -31,7 +31,7 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
           content: SingleChildScrollView(
             child: ListBody(
               children: [
-                Text('Please select valid details'),
+                Text('Mohon pilih detail valid'),
               ],
             ),
           ),
@@ -57,7 +57,7 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
         elevation: 0,
         backgroundColor: transparent,
         title: Text(
-          "Cancel Booking",
+          "Batalkan Pesanan",
           textAlign: TextAlign.center,
           style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
         ),
@@ -75,7 +75,7 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
               ),
               child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Text("Cancel Service")),
+                  child: Text("Batalkan Layanan")),
               onPressed: () {
                 if (refundMethod == null) {
                   _showAlertDialog();
@@ -176,12 +176,12 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
                                                 fontSize: 10),
                                           ),
                                           Space(2),
-                                          Text("on",
+                                          Text("pada",
                                               style: TextStyle(
                                                   color: greyColor,
                                                   fontSize: 8)),
                                           Space(2),
-                                          Text("Thursday",
+                                          Text("Minggu",
                                               style: TextStyle(
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 10)),
@@ -232,14 +232,14 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
                               IntrinsicHeight(
                                 child: Row(
                                   children: [
-                                    Text("1590 Sqft",
+                                    Text("1590 Meter Persegi",
                                         style: TextStyle(
                                             color: greyColor,
                                             fontSize: 14,
                                             fontWeight: FontWeight.w500)),
                                     VerticalDivider(
                                         thickness: 2, color: greyColor),
-                                    Text("3BHK",
+                                    Text("3 Ruang",
                                         style: TextStyle(
                                             color: greyColor,
                                             fontSize: 14,
@@ -263,7 +263,7 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Order Summary",
+                        "Ringkasan Pesanan",
                         textAlign: TextAlign.start,
                         style: TextStyle(
                             fontWeight: FontWeight.w900, fontSize: 18),
@@ -294,7 +294,7 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "GST",
+                        "Pajak",
                         textAlign: TextAlign.start,
                         style: TextStyle(
                             color: greyColor,
@@ -311,7 +311,7 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Coupon Discount",
+                        "Kupon Discount",
                         textAlign: TextAlign.start,
                         style: TextStyle(
                             color: greyColor,
@@ -347,17 +347,17 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16),
               child: Text(
-                "Refund Method",
+                "Metode Pengembalian Dana",
                 textAlign: TextAlign.start,
                 style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18),
               ),
             ),
             Space(16),
             RadioListTile(
-              title: Text("Refund to Original Payment Method",
+              title: Text("Dana dikembalikan ke metode pembayaran Anda",
                   style:
                       TextStyle(fontWeight: FontWeight.normal, fontSize: 16)),
-              value: "OriginalPayment",
+              value: "Metode Pembayaran",
               visualDensity: VisualDensity(horizontal: -4, vertical: -4),
               activeColor: orangeColor,
               contentPadding: EdgeInsets.symmetric(horizontal: 4),
@@ -369,12 +369,12 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
             ),
             RadioListTile(
               visualDensity: VisualDensity(horizontal: -4, vertical: -4),
-              title: Text("Add to My Wallet",
+              title: Text("Tambahkan ke KerjaPay",
                   style:
                       TextStyle(fontWeight: FontWeight.normal, fontSize: 16)),
               contentPadding: EdgeInsets.symmetric(horizontal: 4),
               activeColor: orangeColor,
-              value: "MyWallet",
+              value: "KerjaPay",
               groupValue: refundMethod,
               onChanged: (value) {
                 refundMethod = value.toString();
@@ -385,15 +385,15 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16),
               child: Text(
-                "Why are you cancelling this service",
+                "Mengapa Anda membatalkan layanan ini?",
                 textAlign: TextAlign.start,
                 style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18),
               ),
             ),
             Space(8),
             RadioListTile(
-              title: Text("Booked by mistake"),
-              value: "mistake",
+              title: Text("Kesalahan Pesanan"),
+              value: "Kesalahan",
               visualDensity: VisualDensity(horizontal: -4, vertical: -4),
               contentPadding: EdgeInsets.symmetric(horizontal: 4),
               activeColor: orangeColor,
@@ -405,9 +405,9 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
             ),
             RadioListTile(
               visualDensity: VisualDensity(horizontal: -4, vertical: -4),
-              title: Text("Not available on the date of service"),
+              title: Text("Tidak tersedia pada tanggal yang dituju"),
               activeColor: orangeColor,
-              value: "noAvailable",
+              value: "Tidak Tersedia",
               contentPadding: EdgeInsets.symmetric(horizontal: 4),
               groupValue: reasonForCancel,
               onChanged: (value) {
@@ -417,10 +417,10 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
               },
             ),
             RadioListTile(
-              title: Text("No longer needed"),
+              title: Text("Tidak Digunakan Lagi"),
               activeColor: orangeColor,
               visualDensity: VisualDensity(horizontal: -4, vertical: -4),
-              value: "noNeeded",
+              value: "Tidak Digunakan",
               contentPadding: EdgeInsets.symmetric(horizontal: 4),
               groupValue: reasonForCancel,
               onChanged: (value) {

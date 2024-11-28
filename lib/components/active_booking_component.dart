@@ -45,7 +45,7 @@ class ActiveBookingComponent extends StatelessWidget {
                       activeBookingsModel!.status,
                       textAlign: TextAlign.start,
                       style: TextStyle(
-                        color: activeBookingsModel!.status == "In Process"
+                        color: activeBookingsModel!.status == "Dalam Proses"
                             ? orangeColor
                             : blueColor,
                         fontWeight: FontWeight.w500,
@@ -89,7 +89,7 @@ class ActiveBookingComponent extends StatelessWidget {
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 14)),
                             Space(2),
-                            Text("at",
+                            Text("pada",
                                 style: TextStyle(
                                     color: orangeColor, fontSize: 12)),
                             Space(2),
@@ -115,7 +115,7 @@ class ActiveBookingComponent extends StatelessWidget {
                 Divider(color: dividerColor, thickness: 1),
                 Space(4),
                 Text(
-                  "Cancel",
+                  "Batalkan",
                   textAlign: TextAlign.start,
                   style: TextStyle(
                       color: blueColor,
