@@ -5,7 +5,9 @@ import 'package:flutter/rendering.dart';
 class Space extends LeafRenderObjectWidget {
   final double mainAxisExtent;
 
-  Space(this.mainAxisExtent, {Key? key}) : assert(mainAxisExtent >= 0 && mainAxisExtent <= double.infinity), super(key: key);
+  Space(this.mainAxisExtent, {Key? key})
+      : assert(mainAxisExtent >= 0 && mainAxisExtent <= double.infinity),
+        super(key: key);
 
   @override
   RenderObject createRenderObject(BuildContext context) {
@@ -17,7 +19,6 @@ class Space extends LeafRenderObjectWidget {
     renderObject.mainAxisExtent = mainAxisExtent;
   }
 }
-
 
 class RenderSpace extends RenderBox {
   double _mainAxisExtent;
@@ -35,7 +36,6 @@ class RenderSpace extends RenderBox {
 
   @override
   void performLayout() {
-
     final RenderObject flex = parent!;
 
     if (flex is RenderFlex) {

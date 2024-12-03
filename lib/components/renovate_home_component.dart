@@ -17,29 +17,40 @@ class RenovateHomeComponent extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ServiceScreen(index: index, fromRenovate: true)),
+                MaterialPageRoute(
+                    builder: (context) =>
+                        ServiceScreen(index: index, fromRenovate: true)),
               );
             },
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 8),
               child: Column(
+                mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   ClipRRect(
-                      borderRadius: BorderRadius.circular(16),
-                      child: SizedBox(
-                        width: 160,
-                        height: 100,
-                        child: Image.asset(renovateServices[index].imagePath!, fit: BoxFit.cover),
-                      )),
-                  Space(8),
-                  Text(
-                    textAlign: TextAlign.center,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    renovateServices[index].title,
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    borderRadius: BorderRadius.circular(16),
+                    child: SizedBox(
+                      width: 160,
+                      height: 100,
+                      child: Image.asset(
+                        renovateServices[index].imagePath!,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 8),
+                  Flexible(
+                    child: Text(
+                      renovateServices[index].title,
+                      textAlign: TextAlign.center,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      softWrap: false,
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    ),
                   ),
                 ],
               ),

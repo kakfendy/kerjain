@@ -19,42 +19,58 @@ class CustomerReviewComponent extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(16.0),
           child: Column(
+            mainAxisSize:
+                MainAxisSize.min, // Pastikan ukuran menyesuaikan konten
+            crossAxisAlignment:
+                CrossAxisAlignment.start, // Supaya konten sejajar kiri
             children: [
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CircleAvatar(
                     maxRadius: 20,
-                    backgroundImage: AssetImage(customerReviewModel!.customerImage),
+                    backgroundImage:
+                        AssetImage(customerReviewModel!.customerImage),
                   ),
                   Space(8),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(customerReviewModel!.customerName, style: TextStyle(fontWeight: FontWeight.bold)),
-                      Space(4),
-                      SmoothStarRating(
-                        allowHalfRating: false,
-                        starCount: 5,
-                        rating: customerReviewModel!.rating,
-                        size: 16.0,
-                        color: yellowColor,
-                        borderColor: yellowColor,
-                        filledIconData: Icons.star,
-                        halfFilledIconData: Icons.star_half,
-                        defaultIconData: Icons.star_border,
-                        spacing: .5,
-                      )
-                    ],
+                  Expanded(
+                    // Pastikan area teks dapat menyesuaikan
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          customerReviewModel!.customerName,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        Space(4),
+                        SmoothStarRating(
+                          allowHalfRating: false,
+                          starCount: 5,
+                          rating: customerReviewModel!.rating,
+                          size: 16.0,
+                          color: yellowColor,
+                          borderColor: yellowColor,
+                          filledIconData: Icons.star,
+                          halfFilledIconData: Icons.star_half,
+                          defaultIconData: Icons.star_border,
+                          spacing: .5,
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
               Space(8),
-              Text(
-                customerReviewModel!.detailReview,
-                overflow: TextOverflow.ellipsis,
-                maxLines: 2,
-                style: TextStyle(fontSize: 12),
+              Flexible(
+                // Membatasi teks untuk menghindari overflow
+                child: Text(
+                  customerReviewModel!.detailReview,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 2,
+                  style: TextStyle(fontSize: 12),
+                ),
               ),
             ],
           ),

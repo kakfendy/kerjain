@@ -17,7 +17,8 @@ class CombosSubscriptionsComponent extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ServiceScreen(index: index)),
+                MaterialPageRoute(
+                    builder: (context) => ServiceScreen(index: index)),
               );
             },
             child: Padding(
@@ -32,16 +33,23 @@ class CombosSubscriptionsComponent extends StatelessWidget {
                     child: SizedBox(
                       width: 170,
                       height: 100,
-                      child: Image.asset(combosServices[index].imagePath!, fit: BoxFit.cover),
+                      child: Image.asset(
+                        combosServices[index].imagePath!,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
-                  Space(8),
-                  Text(
-                    textAlign: TextAlign.center,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    combosServices[index].title,
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  SizedBox(height: 8),
+                  Flexible(
+                    child: Text(
+                      combosServices[index].title,
+                      textAlign: TextAlign.center,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      softWrap: false,
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    ),
                   ),
                 ],
               ),
