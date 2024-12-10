@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:home_hub/components/my_scroll_behaviour.dart';
 import 'package:home_hub/screens/splash_screen.dart';
 import 'package:home_hub/utils/colors.dart';
 import 'package:home_hub/utils/constant.dart';
+import 'firebase_options.dart'; // File yang dihasilkan Firebase CLI secara otomatis.
 
 import 'store/appData.dart';
 
 AppData appData = AppData();
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  // Inisialisasi Firebase
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  // Batasi orientasi perangkat ke potret saja
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 

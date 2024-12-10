@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "214561293210",
+    "project_id": "kerjain-224e2",
+    "storage_bucket": "kerjain-224e2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214561293210:android:9eeca67e5fb95fc345b023",
+        "android_client_info": {
+          "package_name": "com.example.home_hub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZkPElLGq9dHPM2QcGIZ6L_-iPEiuT2Pw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
