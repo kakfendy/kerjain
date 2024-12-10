@@ -57,8 +57,8 @@ List<ServicesModel> getServices() {
   list.add(ServicesModel(
       5,
       "Tenaga Kebersihan",
-      "Membantu Anda dalam urusan kebersihkan ruangan",
-      "Kebersihkan",
+      "Membantu Anda dalam urusan kebersihan ruangan",
+      "Kebersihan",
       getHomeCleaning(),
       homeCleaner,
       Icons.cleaning_services_sharp));
