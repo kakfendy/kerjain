@@ -41,7 +41,7 @@ class _WalkThroughScreenState extends State<WalkThroughScreen> {
     list.add(
       WalkThroughModel(
         "Tenaga Profesional Terpercaya",
-        "Cari dari daftar tenaga profesional berkualitas di sekitar Anda, kami menghadirkan yang terbaik untuk Anda",
+        "Temukan dari daftar tenaga profesional berkualitas di sekitar Anda, kami menghadirkan yang terbaik untuk Anda",
         workerNew,
       ),
     );
