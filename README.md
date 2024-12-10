@@ -63,6 +63,3 @@ Proyek ini menggunakan struktur folder berikut:
 
 ## Dokumentasi Lebih Lanjut
 Dokumentasi lengkap kode tersedia di [KerjaIN GitHub](https://github.com/kakfendy/kerjain).
-
-## Lisensi
-Proyek ini menggunakan lisensi [MIT](LICENSE).
