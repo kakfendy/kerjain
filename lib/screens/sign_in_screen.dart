@@ -96,7 +96,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 child: TextFormField(
                   keyboardType: TextInputType.phone,
                   style: TextStyle(fontSize: 16),
-                  inputFormatters: [LengthLimitingTextInputFormatter(10)],
+                  inputFormatters: [LengthLimitingTextInputFormatter(12)],
                   decoration: commonInputDecoration(
                     hintText: "Masukkan no tlp",
                     prefixIcon: Padding(

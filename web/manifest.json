@@ -1,6 +1,6 @@
 {
-    "name": "home_service",
-    "short_name": "home_service",
+    "name": "kerjaIn",
+    "short_name": "kerjaIn",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
