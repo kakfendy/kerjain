@@ -104,9 +104,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       child: GestureDetector(
                         onTap: () => _showCountryPicker(),
                         child: Text(
-                          _selectedCountry == null
-                              ? "+62"
-                              : _selectedCountry!.callingCode,
+                          "+62", // Tetap +62
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 16),
                         ),
